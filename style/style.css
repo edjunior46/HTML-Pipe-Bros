@@ -1,0 +1,352 @@
+:root{
+    --blue: #2288F8;
+    --dark-blue: #2222FE;
+    --orange: #F85422;
+    --yellow: #f8d822;
+    --green: #78f822;
+    --red: #f82222;
+    --purple: #A222F8;
+    --pink: #F8227B;
+}
+
+@font-face {
+    font-family: 'Press Start 2 P';
+    src: url('/style/fonts/PressStart2P.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2 P', sans-serif;
+}
+
+body {
+    background-color: #5590CC;
+}
+
+#navbar{
+    position: fixed;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    backdrop-filter: blur(1px);
+}
+
+#navMenu{
+    list-style: none;
+    display: flex;
+}
+
+.navItem{
+    text-decoration: none;
+    color: #FFFFFF;
+    padding: 1rem;
+    margin-left: 1rem;
+    text-shadow: 1px 1px #000000, -1px 1px #000000,
+    1px -1px #000000, -1px -1px #000000;
+}
+
+@keyframes nav-icon {
+    0% {
+        transform: translateY(0);
+    } 33% {
+        transform: translateY(-5px);
+    } 66% {
+        transform: translateY(5px);
+    } 100% {
+        transform: translateY(0px);
+    }
+}
+
+#slogan{
+    height: 90vh;
+    background-image: url(/style/img/mainBackground.webp);
+    background-position-x: center;
+    background-position-y: -100px;
+    background-size: cover;
+}
+
+#sloganContent{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(3px);
+    z-index: 5;
+}
+
+.sloganMain{
+    font-size: 4rem;
+    font-weight: bolder;
+    text-align: center;
+    color: #FFF;
+    text-shadow: 3px 3px #000, -3px -3px #000, 3px -3px #000, -3px 3px #000;
+}
+
+.sloganSub{
+    margin-top: 10px;
+    font-size: 1.5rem;
+    color: #000;
+    text-shadow: 2px 2px #fff;
+}
+
+#aboutSection{
+    padding: 20px 0;
+    width: 100%;
+    text-align: center;
+    background-image: url(./img/aboutBackground.gif);
+    background-size: 50%;
+}
+
+#aboutTitle {
+    font-size: 2.5rem;
+    animation: rainbow-text 1.5s linear infinite;
+    font-weight: bolder;
+    text-shadow: 3px 3px #000;
+    color: #fff;
+}
+
+@keyframes rainbow-text {
+    0%{
+        color: var(--red);
+    } 12.5% {
+        color: var(--orange);
+    } 25% {
+        color: var(--yellow);
+    } 37.5% {
+        color: var(--green);
+    } 50% {
+        color: var(--blue);
+    } 62.5% {
+        color: var(--dark-blue);
+    } 75% {
+        color: var(--purple);
+    } 87.5% {
+        color: var(--pink);
+    } 100% {
+        color: var(--red);
+    }
+}
+
+.aboutContainer{
+    height: 50vh;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.aboutText{
+    margin: 0 20px;
+    height: 70%;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    color: #fff;
+    text-shadow: 2px 2px #000, -2px -2px #000, 2px -2px #000, -2px 2px #000;
+}
+
+.aboutText::selection{
+    color: #000;
+    text-shadow: 2px 2px #fff, -2px -2px #fff, 2px -2px #fff, -2px 2px #fff;
+}
+
+.aboutImg{
+    background-image: url(./img/pipe.png);
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30%;
+    height: 100%;
+}
+
+#productsSection{
+    height: 90vh;
+    background-repeat: repeat-x;
+    background-position: bottom;
+    padding: 20px 0;
+    width: 100%;
+    background-image: url(./img/teste.png);
+}
+
+#productsTitle{
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 3px 3px #000;
+    display: flex;
+    justify-content: center;
+}
+
+#productsContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.productCard {
+    background-color: #fff;
+    border: 3px solid;
+    height: 200px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+    transform: translateY(-70px);
+}
+
+.productCard span {
+    position: absolute;
+    margin: 15px 0;
+}
+
+.productCard ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+    font-size: .8rem;
+}
+
+.productCard li {
+    margin: 15px 5px;
+    height: .8rem;
+}
+
+.productCard li img {
+    animation: rotating 2s linear infinite;
+}
+
+.productCard button {
+    position: absolute;
+    margin-top: 160px;
+    background-color: var(--green);
+    padding: 5px;
+    cursor: pointer;
+    transition: .3s linear;
+}
+
+.productCard button:hover {
+    background-color: var(--orange);
+    color: #fff;
+}
+
+.productsImgs {
+    position: absolute;
+    z-index: -1;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.productsImg {
+    height: 350px;
+    transform: translateY(-110px);
+}
+
+.disableRating {
+    filter: saturate(0);
+    opacity: .3;
+    transform: translateY(-4px);
+}
+
+.productCard a {
+    text-decoration: none;
+    margin: auto;
+    background-color: var(--green);
+    color: #000;
+    font-weight: bold;
+    border: 3px solid;
+    height: 200px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.productCard a img {
+    width: 25px;
+    margin-top: 10px;
+}
+
+.lastCard {
+    background-color: transparent;
+    border: none;
+}
+
+@keyframes rotating {
+    0% {
+        transform: rotate3d(0, 1, 0, 0deg) translateY(-4px);
+    } 25%{
+        transform: rotate3d(0, 1, 0, 90deg) translateY(-4px);
+    } 50% {
+        transform: rotate3d(0, 1, 0, 180deg) translateY(-4px);
+    } 75% {
+        transform: rotate3d(0, 1, 0, 270deg) translateY(-4px);
+    } 100% {
+        transform: rotate3d(0, 1, 0, 360deg) translateY(-4px);
+    }
+}
+
+#ratingSection {
+    margin: px 0;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-image: url(./img/teste2.png);
+}
+
+#ratingBtns{
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ratingBtn{
+    height: 100%;
+    background-color: #d1d1d1;
+}
+
+#ratingContent {
+    height: 30vh;
+    display: flex;
+    margin-left: 60px;
+}
+
+.ratingRewiew{
+    height: 100%;
+    width: 400px;
+    border: 1px solid #000000;
+    margin: 0 5px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: 1fr 100%;
+}
+
+.ratingImg{
+    width: 80px;
+    height: 80px;
+    background-color: rgb(134, 65, 65);
+}
