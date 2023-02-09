@@ -1,6 +1,6 @@
 # HTML-Pipe-Bros
 _Landing Page com a temática fictícia de Canos de Transporte_ -
-status: _Em andamento_
+status: _Descontinuado_
 <p>Nesse projeto decidi desenvolver uma página estática utilizando HTML, CSS e o mínimo de Javascript possível. Usei como temática Canos de Transporte, uma paródia ao jogo Super Mario World, desenvolvido pela Nintendo em 1990 para SNES e GBA.</p>
 
 ## Pré-requisitos
